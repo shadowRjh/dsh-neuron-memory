@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.1
+
+- 改进 `neuron_search` 的文本提取：递归解析 `data.inserted[].content[]` 与会话标题行，输出可读原话而不是原始 JSON
+
 ## 2.1.0
 
 - 新增**交接层**：`neuron_handoff` 工具 + `handoff.md` 覆盖写（≤4KB），每轮固定注入「当前交接」，新会话开场即知进度；覆盖前自动留档 `handoff-history.jsonl`
