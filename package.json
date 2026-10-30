@@ -1,7 +1,7 @@
 {
   "name": "dsh-neuron-memory",
-  "version": "2.0.0",
-  "description": "Neuron memory for DSH: hippocampus -> nightly patrol -> pools -> relevance-filtered injection (Ebbinghaus decay + spaced repetition), plus one 3D neuron star-ring panel over the whole local harness (sessions, thinking chain, services, cost, plugins, system).",
+  "version": "2.1.0",
+  "description": "Neuron memory for DSH: hippocampus -> nightly patrol -> pools -> relevance-filtered injection (Ebbinghaus decay + spaced repetition), a 4KB handoff layer injected every turn, hard caps per entry/pool, original-session search over multi-frame zstd archives, plus one 3D neuron star-ring panel over the whole local harness.",
   "type": "module",
   "main": "./lib/index.js",
   "exports": {
