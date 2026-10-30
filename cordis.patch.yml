@@ -1,0 +1,4 @@
+# dsh-neuron-memory bundle patch
+- insert:
+    - id: neuron-memory
+      name: dsh-neuron-memory
