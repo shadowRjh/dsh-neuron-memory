@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.2.1
+
+- 修复 v2.2.0 的启动崩溃：`FEIYU_STATE` / `FISH_DIR` 在 `DSH_HOME` 声明前使用，真实环境下（无 `NEURON_FEIYU_STATE` 等环境变量）模块 import 即抛 `ReferenceError: Cannot access 'DSH_HOME' before initialization`。已把生态桥路径常量移到 `DSH_HOME` 之后
+
 ## 2.2.0
 
 - 新增**生态桥 · 鱼的心情**：读 `~/.dsh/feiyu-mood/state.json`，每轮固定注入「当前心情」（数值/五档/情绪维度/理由），3D 面板新增心情节点与侧栏；未安装时自动跳过
