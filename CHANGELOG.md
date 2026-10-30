@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.1.0
+
+- 新增**交接层**：`neuron_handoff` 工具 + `handoff.md` 覆盖写（≤4KB），每轮固定注入「当前交接」，新会话开场即知进度；覆盖前自动留档 `handoff-history.jsonl`
+- 新增**硬上限**：单条记忆 ≤2KB、每池 ≤200 条；超出自动裁剪、按权重/年龄归档（`enforceLimits`，夜巡时执行）
+- 新增**翻旧账** `neuron_search`：直接解压历史会话多帧 zstd，按关键词搜原话，不依赖 Python
+- 3D 面板新增交接层节点与侧栏交接体量
+- 配置新增 `limits` / `handoff`，`version` 升到 2
+
 ## 2.0.0
 
 - 合并「思维链 / 神经元 / 神经元记忆」三个插件为一个：唯一标签页「神经元」
