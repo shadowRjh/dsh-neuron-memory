@@ -1,0 +1,38 @@
+{
+  "name": "dsh-neuron-memory",
+  "version": "2.0.0",
+  "description": "Neuron memory for DSH: hippocampus -> nightly patrol -> pools -> relevance-filtered injection (Ebbinghaus decay + spaced repetition), plus one 3D neuron star-ring panel over the whole local harness (sessions, thinking chain, services, cost, plugins, system).",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": { "dsh": ">=0.2.0-rc.2 <0.3.0-0", "node": ">=22" },
+  "keywords": ["dsh", "dsh-plugin", "dsh-market", "memory", "neuron", "ebbinghaus", "3d"],
+  "author": "dsh-neuron-memory contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shadowRjh/dsh-neuron-memory.git"
+  },
+  "homepage": "https://github.com/shadowRjh/dsh-neuron-memory#readme",
+  "bugs": {
+    "url": "https://github.com/shadowRjh/dsh-neuron-memory/issues"
+  },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": { "inject": ["@deepseek-ai/dsh-client-runtime"], "platform": "web" }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
+}
