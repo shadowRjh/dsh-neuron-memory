@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.2.0
+
+- 新增**生态桥 · 鱼的心情**：读 `~/.dsh/feiyu-mood/state.json`，每轮固定注入「当前心情」（数值/五档/情绪维度/理由），3D 面板新增心情节点与侧栏；未安装时自动跳过
+- 新增**生态桥 · 鱼的记忆**：读 `~/.dsh/fish-memory/*.json`（v2 库格式），首次启动自动导入，长期事实（`stable_profile`）进核心池、事件按关键词分池、按重要度折算初始权重、按文本去重；新增工具 `neuron_import_fish` 可随时重跑
+- 配置新增 `bridges.feiyuMood` / `bridges.fishMemory`（均可用开关关掉）
+- 说明：memOS / Hindsight 属外部记忆服务，speak-up / tts-bridge / 表情包属对话层，未并入核心；详见 README「生态兼容」
+
 ## 2.1.1
 
 - 改进 `neuron_search` 的文本提取：递归解析 `data.inserted[].content[]` 与会话标题行，输出可读原话而不是原始 JSON
