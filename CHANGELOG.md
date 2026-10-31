@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.3.0
+
+- **交接最小视图**：`handoff.md` 全量存盘，但每轮只注入「项目 / 下一步 / 卡在」三行（`handoff.injectChars`，默认 600 字），固定上下文占用大幅下降
+- **自动压缩**：每 `compactEveryTurns` 轮（默认 12）或交接超过 `compactThreshold`（默认 800 字）时，自动把交接压缩重写，旧版进 `handoff-history.jsonl`
+- **情绪事件落库**：心情变化 ≥ `emotion.eventMinDelta`（默认 5）时，自动写一条情绪记忆（如「心情 70 → 78（开心）：被夸了」），进 emotion 池
+- **情绪加权召回**：心情与记忆情感同向时召回排名 +`emotion.recallBoost`（默认 0.15），反向轻微抑制
+- **情绪锚点**：情绪记忆被想起时额外强化 +`emotion.anchorBonus`（默认 0.1）
+- **情绪时间线**：面板心情区显示最近 3 次心情变化
+- **噪音过滤**：运行时上下文（Current working directory / Approval policy / Use the read tool 等）不再写进海马体
+
 ## 2.2.1
 
 - 修复 v2.2.0 的启动崩溃：`FEIYU_STATE` / `FISH_DIR` 在 `DSH_HOME` 声明前使用，真实环境下（无 `NEURON_FEIYU_STATE` 等环境变量）模块 import 即抛 `ReferenceError: Cannot access 'DSH_HOME' before initialization`。已把生态桥路径常量移到 `DSH_HOME` 之后
