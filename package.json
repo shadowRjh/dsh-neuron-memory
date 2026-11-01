@@ -1,7 +1,7 @@
 {
   "name": "dsh-neuron-memory",
-  "version": "2.3.1",
-  "description": "Neuron memory for DSH: hippocampus -> nightly patrol -> pools -> relevance-filtered injection (Ebbinghaus decay + spaced repetition), a minimal handoff view injected every turn (auto-compacted), hard caps, original-session search, emotion layer (mood events, mood-aware recall, emotional anchoring), ecosystem bridges to dsh-feiyu-mood and dsh-fish-memory, plus one 3D neuron star-ring panel.",
+  "version": "2.4.0",
+  "description": "Neuron memory for DSH: hippocampus -> nightly patrol -> pools -> relevance-filtered injection (Ebbinghaus decay + spaced repetition), minimal auto-compacted handoff, hard caps, original-session search, emotion layer, optional vector retrieval (off by default, keyword fallback), ecosystem bridges, and a 3D memory panel with 4 selectable themes and task-signal pulses.",
   "type": "module",
   "main": "./lib/index.js",
   "exports": {
