@@ -1,7 +1,7 @@
 {
   "name": "dsh-neuron-memory",
-  "version": "2.4.0",
-  "description": "Neuron memory for DSH: hippocampus -> nightly patrol -> pools -> relevance-filtered injection (Ebbinghaus decay + spaced repetition), minimal auto-compacted handoff, hard caps, original-session search, emotion layer, optional vector retrieval (off by default, keyword fallback), ecosystem bridges, and a 3D memory panel with 4 selectable themes and task-signal pulses.",
+  "version": "2.7.0",
+  "description": "Neuron memory for DSH: hippocampus -> nightly patrol -> tiered I×R decay (hard facts never decay), write gate, fact card (once per session), relevance-filtered injection, minimal handoff, due reminders, audit/doctor tools, emotion layer, optional vector retrieval, ecosystem bridges, and a workbench-style 3D memory panel (nav + star map, 5 themes + custom accent, task-signal pulses).",
   "type": "module",
   "main": "./lib/index.js",
   "exports": {
